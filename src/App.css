@@ -1,38 +1,106 @@
-.App {
-  text-align: center;
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: 'lato', sans-serif;
+  font-weight: 400;
+  line-height: 1.4;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: #fff;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+a {
+  text-decoration: none;
+  color: #000;
+  outline: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img {
+  width: 100%;
+  vertical-align: middle;
+  transition: all 0.3s ease-in-out;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+.LandingPage{
+  height: 100vh;
+  /* background-color: aqua; */
+}
+.Main{
+  display: grid;
+  grid-template-columns: 20% 80%;
+  height: 100%;
+}
+
+.Sidebar{
   display: flex;
   flex-direction: column;
+  color: #fff;
+  background-color: #000;
+  padding: 1rem;
+}
+.Spotify{
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-bottom: 3rem;
+}
+.Spotify img{
+  width: 2rem;
+}
+.Spotify .Heading{
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
-.App-link {
-  color: #61dafb;
+
+.SidebarLists > *{
+  margin-bottom: .5rem;
+}
+.sidebar-list{
+  display: flex;
+  align-items: center;
+}
+.sidebar-list .icon{
+  margin-right: .5rem;
+}
+.sidebar-list .name{
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+  opacity: .8;
+  font-weight: 600;
+  transition: all .2s ease-in-out;
+}
+.sidebar-list .name:hover{
+  opacity: 1;
+  transition: all .2s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Navbar */
+.NavbarPlaylist{
+  position: relative;
+}
+.NavbarPlaylist nav{
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: rgb(120,4,16);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.Playlist{
+  height: 100%;
+  background: linear-gradient(180deg, rgb(120,4,16) 0%, #222222 50%, #222222 100%);
 }
