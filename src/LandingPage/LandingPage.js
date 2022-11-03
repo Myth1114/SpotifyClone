@@ -1,47 +1,45 @@
 import React from "react";
-import { GrHomeRounded } from "react-icons/gr";
-import { BsSearch } from "react-icons/bs";
-import { BiLibrary } from "react-icons/bi";
+import {FaGreaterThan, FaLessThan} from 'react-icons/fa'
+import SideBar from "../Components/Sidebar/SideBar";
+import CardComponent from "../Components/CardComponent/CardComponent";
+import { GoPlay } from "react-icons/go";
+import { recent } from "../Data/recent";
 const LandingPage = () => {
   return (
     <section className="LandingPage">
+      <SideBar/>
       <div className="Main">
-        <div className="Sidebar">
-          <div className="Spotify">
-            <img src="/Images/spotify.png" alt="logo" />
-            <span className="Heading">Spotify</span>
-          </div>
-          <div className="SidebarLists">
-            <div className="sidebar-list">
-              <div className="icon">
-                <GrHomeRounded fill="#fff" size={20} />
-              </div>
-              <span className="name">Home</span>
-            </div>
-            <div className="sidebar-list">
-              <div className="icon">
-                <BsSearch fill="#fff" size={17} />
-              </div>
-              <span className="name">Search</span>
-            </div>
-            <div className="sidebar-list">
-              <div className="icon">
-                <BiLibrary fill="#fff" size={20} />
-              </div>
-              <span className="name">Library</span>
-            </div>
-          </div>
-        </div>
         <div className="NavbarPlaylist">
           <nav>
             <div className="NavItems">
-              <div>arrow</div>
-              <div>arrow</div>
+              <div className="Less"><FaLessThan/></div>
+              <div className="More"><FaGreaterThan/></div>
             </div>
-            <div>profile</div>
+            <div className="Profile">
+              <img src="./Images/Daily.png" alt="fff"/>
+              <h4 className="user">Myth</h4>
+            </div>
           </nav>
-          <div className="Playlist">playlist</div>
+          <div className="Playlist">
+            <div className="DailyMixes">
+              <h2>Good Evening</h2>
+              <div className="Container">
+              {recent.map((el)=>{
+                return (
+                  <div className="Box">
+                    <img src={el.img} alt="ww"/>
+                    <span className="Back"></span>
+                    <span className="Title">{el.name}</span>
+                    <div className="FirstButton"><GoPlay fill="#1ed760" size={50}/></div>
+                  </div>                  
+                )
+              })}
+               </div>
+            </div>
+          </div>
+          <CardComponent/>
         </div>
+       
       </div>
     </section>
   );

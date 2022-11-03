@@ -10,7 +10,7 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: 'lato', sans-serif;
+  font-family: "lato", sans-serif;
   font-weight: 400;
   line-height: 1.4;
   box-sizing: border-box;
@@ -32,75 +32,180 @@ img {
   backface-visibility: hidden;
   overflow: hidden;
 }
-.LandingPage{
+.LandingPage {
+  position: relative;
   height: 100vh;
-  /* background-color: aqua; */
-}
-.Main{
   display: grid;
   grid-template-columns: 20% 80%;
-  height: 100%;
-}
-
-.Sidebar{
-  display: flex;
-  flex-direction: column;
-  color: #fff;
   background-color: #000;
-  padding: 1rem;
 }
-.Spotify{
-  display: flex;
-  align-items: center;
-  margin-bottom: 3rem;
-}
-.Spotify img{
-  width: 2rem;
-}
-.Spotify .Heading{
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-
-.SidebarLists > *{
-  margin-bottom: .5rem;
-}
-.sidebar-list{
-  display: flex;
-  align-items: center;
-}
-.sidebar-list .icon{
-  margin-right: .5rem;
-}
-.sidebar-list .name{
-  font-weight: 500;
-  color: #ffffff;
-  cursor: pointer;
-  opacity: .8;
-  font-weight: 600;
-  transition: all .2s ease-in-out;
-}
-.sidebar-list .name:hover{
-  opacity: 1;
-  transition: all .2s ease-in-out;
+.Main {
+  display: grid;
+  /* grid-template-columns: 20% 80%; */
+  overflow-y: scroll;
 }
 
 /* Navbar */
-.NavbarPlaylist{
+.NavbarPlaylist {
   position: relative;
 }
-.NavbarPlaylist nav{
+.NavbarPlaylist nav {
   position: sticky;
   top: 0;
   left: 0;
-  background-color: rgb(120,4,16);
+  background-color: rgb(120, 4, 16);
+  color: #fff;
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
+  align-items: baseline;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+.NavbarPlaylist nav .NavItems {
+  display: flex;
+}
+.NavbarPlaylist nav .NavItems .Less, .NavbarPlaylist nav .NavItems .More{
+  background-color: #000;
+  width: 2.4rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: .7rem;
+  cursor: pointer;
+}
+.NavbarPlaylist nav .NavItems .Less{
+  margin-right: .5rem;
+}
+.NavbarPlaylist nav .Profile {
+  background-color: #000;
+  padding: 0.3rem 1rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+}
+.NavbarPlaylist nav .Profile img {
+  border-radius: 50%;
+  width: 1.5rem;
+  margin-right: 0.4rem;
+}
+.Playlist {
+  /* height: 100%; */
+  background: linear-gradient(
+    180deg,
+    rgb(120, 4, 16) 0%,
+    #222222 50%,
+    #000000 100%
+  );
+}
+.DailyMixes {
+  padding-top: 4rem;
+}
+ h2{
+  color: #fff;
+  margin-left: 1rem;
+}
+.DailyMixes .Container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 1rem;
+  margin: 1rem;
 }
 
-.Playlist{
-  height: 100%;
-  background: linear-gradient(180deg, rgb(120,4,16) 0%, #222222 50%, #222222 100%);
+.DailyMixes .Container .Box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor:pointer;
+}
+.DailyMixes .Container .Box .FirstButton{
+  position: absolute;
+  top: 14%;
+  bottom: 0;
+  right: 1%;
+  opacity: 0;
+  transition: all 0.4s ease;
+} 
+.DailyMixes .Container .Box:hover .FirstButton{
+  opacity: 1;
+  transition: all 0.4s ease;
+  z-index: 4;
+}
+.DailyMixes .Container .Box .Back {
+  background-color: #fff;
+  opacity: 0.1;
+  width: 100%;
+  height: 4.7rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  transition: all 0.3s ease-in-out;
+  z-index: 3;
+}
+.DailyMixes .Container .Box .Back:hover {
+  opacity: 0.4;
+  transition: all 0.3s ease-in-out;
+}
+.DailyMixes .Container .Box img {
+  width: 5.9rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+.DailyMixes .Container .Box .Title {
+  position: absolute;
+  left: 22%;
+  color: #fff;
+  font-weight: bold;
+  width: 14rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* Card Design */
+
+.Cards {
+  margin: 4rem 0;
+}
+
+.CardList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 1rem;
+}
+.CardList figure {
+  position: relative;
+  color: #fff;
+  padding: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.CardList figure .Button{
+  position: absolute;
+  top: 46%;
+  bottom: 0;
+  right: 10%;
+  /* -webkit-transform: translateY(50%);
+  transform: translateY(50%); */
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.CardList figure:hover .Button{
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+.CardList figure figcaption {
+  display: flex;
+  flex-direction: column;
+}
+.CardList figure figcaption h3 {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.CardList figure figcaption small {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.CardList figure:hover {
+  background-color: #2b2b2b;
+  transition: all 0.2s ease-in-out;
 }
