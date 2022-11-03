@@ -1,31 +1,31 @@
 export const mixes= [
     {
         id: 1,
-          title: 'Liked Songs',
-          description:'16 songs',
-          img: '/Images/liked.png'
+          title: '2000s Mix',
+          description:'Mohit Chauhan, Atif Aslam, A.R Rahman, Sonu Nigam, etc',
+          img: '/Images/4.png'
     },
     {
         id: 2,
-          title: 'Bollywood Mush',
-          description:'Best Bollywood songs from last 10 years qwerty',
-          img: '/Images/mush.png'
+          title: 'Pritam Mix',
+          description:'Vishal-Shekhar, Mohit Chauhan, Alka Yagnik and more',
+          img: '/Images/pritam.png'
     },
     {
         id: 3,
-          title: 'Nepali all time hit songs',
-          description:'Enjoy the beauty of Nepali songs',
-          img: '/Images/5.png'
+          title: 'Moody Mix',
+          description:'Ed Sheeran, Maroon 5, Bruno Mars and 5 more ',
+          img: '/Images/moody.png'
     },
     {
         id: 4,
-          title: 'Top English Songs',
-          description:'Most loved songs from recent years',
-          img: '/Images/6.png'
+          title: 'KK Mix',
+          description:'Sachet Tandon, Arijit Singh, Neeti Mohan and more',
+          img: '/Images/1.png'
     },
     {
         id: 5,
-          title: 'Atif Aslam',
+          title: 'Atif Mix',
           description:'All time hits of Atif Aslam',
           img: '/Images/2.png'
     },

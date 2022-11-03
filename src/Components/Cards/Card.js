@@ -5,7 +5,7 @@ const Card = ({ el }) => {
   return (
     <>
       <figure>
-        <img src={el.img} alt="kkk"></img>
+        <img src={el.img} alt="kkk" loading="lazy"></img>
         <div className="Button"><GoPlay fill="#1ed760" size={50}/></div>
         <figcaption>
           <h3>{el.title}</h3>

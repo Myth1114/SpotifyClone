@@ -1,9 +1,11 @@
 import React from "react";
-import {FaGreaterThan, FaLessThan} from 'react-icons/fa'
+
 import SideBar from "../Components/Sidebar/SideBar";
-import CardComponent from "../Components/CardComponent/CardComponent";
+import RecentPlaylist from "../Components/RecentPlaylist/RecentPlaylist";
+import MixesPlaylist from "../Components/MixesPlaylist/MixesPlaylist";
+import { collection } from "../Data/collection";
+import {FaGreaterThan, FaLessThan} from 'react-icons/fa'
 import { GoPlay } from "react-icons/go";
-import { recent } from "../Data/recent";
 const LandingPage = () => {
   return (
     <section className="LandingPage">
@@ -24,7 +26,7 @@ const LandingPage = () => {
             <div className="DailyMixes">
               <h2>Good Evening</h2>
               <div className="Container">
-              {recent.map((el)=>{
+              {collection.map((el)=>{
                 return (
                   <div className="Box">
                     <img src={el.img} alt="ww"/>
@@ -37,7 +39,8 @@ const LandingPage = () => {
                </div>
             </div>
           </div>
-          <CardComponent/>
+          <RecentPlaylist/>
+          <MixesPlaylist/>
         </div>
        
       </div>

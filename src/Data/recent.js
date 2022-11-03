@@ -1,32 +1,32 @@
 export const recent= [
-    {
-        id: 1,
-          name: 'Bollywood Mush',
-          img: '/Images/3.png'
-    },
-    {
-        id: 2,
-          name: 'Top English Songs of All Time',
-          img: '/Images/6.png'
-    },
-    {
-        id: 3,
-          name: 'Hindi Top',
-          img: '/Images/daily.png'
-    },
-    {
-        id: 4,
-          name: 'Nepali Hit Songs',
-          img: '/Images/5.png'
-    },
-    {
-        id: 5,
-          name: 'Romantic Mix',
-          img: '/Images/3.png'
-    },
-    {
-        id: 6,
-          name: '2000s Mix',
-          img: '/Images/4.png'
-    },
+  {
+      id: 1,
+        title: 'Liked Songs',
+        description:'16 songs',
+        img: '/Images/liked.png'
+  },
+  {
+      id: 2,
+        title: 'Bollywood Mush',
+        description:'Best Bollywood songs from last 10 years qwerty',
+        img: '/Images/mush.png'
+  },
+  {
+      id: 3,
+        title: 'Nepali all time hit songs',
+        description:'Enjoy the beauty of Nepali songs',
+        img: '/Images/5.png'
+  },
+  {
+      id: 4,
+        title: 'Top English Songs',
+        description:'Most loved songs from recent years',
+        img: '/Images/6.png'
+  },
+  {
+      id: 5,
+        title: 'Atif Aslam',
+        description:'All time hits of Atif Aslam',
+        img: '/Images/2.png'
+  },
 ]
