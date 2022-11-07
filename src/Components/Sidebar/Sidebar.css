@@ -21,15 +21,45 @@
 .SidebarLists > * {
   margin-bottom: 0.5rem;
 }
+.SidebarLists{
+  border-bottom: .7px solid #ccc;
+}
 .sidebar-list {
   display: flex;
   align-items: center;
 }
+
 .sidebar-list .icon {
   margin-right: 0.5rem;
+  color:#fff;
+  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+}
+.sidebar-list .Bookmark{
+  font-size: 1rem;
+  background-color: rgb(23, 70, 23);
+  color: rgb(2, 186, 2);
+  padding: .4rem;
+  border-radius: .3rem;
+}
+.sidebar-list .Playlist{
+  font-size: 1rem;
+  background-color: #ccc;
+  padding: .4rem;
+  border-radius: .3rem;
+}
+.sidebar-list .Heart{
+  font-size: 1rem;
+  background: linear-gradient(135deg, #1176E7, #fff);
+  padding: .4rem;
+  border-radius: .3rem;
+}
+.gap{
+  margin-top: 2rem;
 }
 .sidebar-list .name {
-  font-weight: 500;
+  font-size: .9rem;
   color: #ffffff;
   cursor: pointer;
   opacity: 0.8;
@@ -39,4 +69,27 @@
 .sidebar-list .name:hover {
   opacity: 1;
   transition: all 0.2s ease-in-out;
+}
+
+.SideScrollBar{
+  background-color: #000;
+  margin:.5rem;
+  height: 24rem;
+  overflow-x: scroll;
+
+}
+.SideScrollBar ul{
+  margin-top: .4rem;
+}
+.SideScrollBar ul li{
+  padding: .3rem;
+  font-size: .9rem;
+  color: #ffffff;
+  opacity: .8;
+  transition: all .3s ease-in-out;
+}
+
+.SideScrollBar ul li:hover{
+  opacity: 1;
+  transition: all .3s ease-in-out;
 }
