@@ -6,8 +6,8 @@ footer {
   text-align: center;
 }
 footer .MusicPlayer {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 0.5fr;
   align-items: center;
   background-color: #000;
   color: #fff;
@@ -20,6 +20,15 @@ footer .MusicPlayer .LeftBox {
   display: flex;
   align-items: center;
 }
+.LeftBox .SongName small{
+  float: left;
+  color: #ccc;
+  transition: all .2s ease-in-out;
+}
+.LeftBox .Icon:hover {
+  color: green;
+  transition: all .2s ease-in-out;
+}
 footer .MusicPlayer .LeftBox > * {
   margin-right: 1rem;
 }
@@ -27,32 +36,70 @@ footer .MusicPlayer .LeftBox > * {
   position: relative;
   display: flex;
   flex-direction: column;
-  width: 52%;
-
 }
-
+.MiddleBox  .MusicBottons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: -.8rem;
+  cursor: pointer;
+}
 .MiddleBox .MusicBottons .Icon {
-  font-size: 2rem;
+  font-size: 1.5rem;
+  color: #999797;
+  margin: 0 .3rem;
+  transition: all .3s ease-in-out;
 }
-progress {
+.MiddleBox .MusicBottons .Icon:hover {
+  color: #fff;
+  transition: all .3s ease-in-out;
+}
+.MiddleBox .MusicBottons .Play {
+  color: #fff;
+  font-size: 2.3rem;
+}
+.ProgressBar {
   border-radius: 7px;
-  width: 100%;
+  width: 80%;
   height: 2px;
 }
-progress::-webkit-progress-bar {
+.ProgressBar2 {
+  border-radius: 7px;
+  height: 2px;
+  margin-bottom: .4rem;
+}
+.ProgressBar::-webkit-progress-bar {
   background-color: rgb(152, 152, 152);
   border-radius: 7px;
 }
-progress::-webkit-progress-value {
+
+.ProgressBar2::-webkit-progress-bar {
+  background-color: rgb(152, 152, 152);
+  border-radius: 7px;
+}
+.ProgressBar::-webkit-progress-value {
   background-color: #fff;
   border-radius: 7px;
 }
-
+.ProgressBar2::-webkit-progress-value {
+  background-color: #fff;
+  border-radius: 7px;
+}
 .MusicPlayer .RightBox {
   display: flex;
   justify-content: center;
 }
+.MusicPlayer .RightBox > * {
+  margin-right: 0.5rem;
+}
 
-/* .MusicPlayer .LeftBox, .MusicPlayer .MiddleBox, .MusicPlayer .RightBox{
-    flex-grow: 1;
-} */
+.MusicPlayer .RightBox .RightIcon {
+  font-size: 1.2rem;
+  color: #999797;
+  transition: all .3s ease-in-out;
+  cursor: pointer;
+}
+.MusicPlayer .RightBox .RightIcon:hover {
+  color: #fff;
+  transition: all .3s ease-in-out;
+}

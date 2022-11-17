@@ -4,24 +4,15 @@ import SideBar from "../Components/Sidebar/SideBar";
 import RecentPlaylist from "../Components/RecentPlaylist/RecentPlaylist";
 import MixesPlaylist from "../Components/MixesPlaylist/MixesPlaylist";
 import { collection } from "../Data/collection";
-import {FaGreaterThan, FaLessThan} from 'react-icons/fa'
 import { GoPlay } from "react-icons/go";
+import NavBar from "../Components/NavBar/NavBar";
 const LandingPage = () => {
   return (
     <section className="LandingPage">
       <SideBar/>
       <div className="Main">
+      <NavBar/>
         <div className="NavbarPlaylist">
-          <nav>
-            <div className="NavItems">
-              <div className="Less"><FaLessThan/></div>
-              <div className="More"><FaGreaterThan/></div>
-            </div>
-            <div className="Profile">
-              <img src="./Images/Daily.png" alt="fff"/>
-              <h4 className="user">Myth</h4>
-            </div>
-          </nav>
           <div className="Playlist">
             <div className="DailyMixes">
               <h2>Good Evening</h2>

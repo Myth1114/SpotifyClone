@@ -60,14 +60,13 @@
 }
 .sidebar-list .name {
   font-size: .9rem;
-  color: #ffffff;
+  color: #999797;
   cursor: pointer;
-  opacity: 0.8;
   font-weight: 600;
   transition: all 0.2s ease-in-out;
 }
 .sidebar-list .name:hover {
-  opacity: 1;
+ color: #fff;
   transition: all 0.2s ease-in-out;
 }
 
@@ -84,12 +83,20 @@
 .SideScrollBar ul li{
   padding: .3rem;
   font-size: .9rem;
-  color: #ffffff;
-  opacity: .8;
+  color: #999797;
   transition: all .3s ease-in-out;
+  cursor: pointer;
 }
 
 .SideScrollBar ul li:hover{
-  opacity: 1;
+ color: #fff;
   transition: all .3s ease-in-out;
+}
+
+
+/* Medai Queries */
+@media (max-width:600px){
+    .Sidebar{
+      display: none;
+    }
 }

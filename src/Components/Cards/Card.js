@@ -3,7 +3,6 @@ import { GoPlay } from "react-icons/go";
 import "./Card.css";
 const Card = ({ el }) => {
   return (
-    <>
       <figure>
         <img src={el.img} alt="kkk" loading="lazy"></img>
         <div className="Button"><GoPlay fill="#1ed760" size={50}/></div>
@@ -12,7 +11,6 @@ const Card = ({ el }) => {
           <small>{el.description}</small>
         </figcaption>
       </figure>
-    </>
   );
 };
 

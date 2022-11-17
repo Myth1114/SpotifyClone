@@ -1,16 +1,12 @@
 import React from "react";
 import "./BottomNavigation.css";
 
-import { AiOutlineHeart } from "react-icons/ai";
-import { BiShuffle } from "react-icons/bi";
-import { GiPreviousButton } from "react-icons/gi";
-import { GiNextButton } from "react-icons/gi";
-import { BsFillPlayFill } from "react-icons/bs";
+import { AiOutlineHeart, AiOutlineAlignCenter ,AiOutlineExpandAlt } from "react-icons/ai";
+import { BiShuffle} from "react-icons/bi";
+import {ImNext2, ImPrevious2} from 'react-icons/im'
+import { FaPlayCircle } from "react-icons/fa";
 import { RiRepeat2Fill } from "react-icons/ri";
-import { TbMicrophone2 } from "react-icons/tb";
-import { AiOutlineAlignCenter } from "react-icons/ai";
-import { TbDevices2 } from "react-icons/tb";
-import { AiOutlineExpandAlt } from "react-icons/ai";
+import { TbMicrophone2,TbDevices2 } from "react-icons/tb";
 import { BsFillVolumeUpFill } from "react-icons/bs";
 
 const BottomNavigation = () => {
@@ -33,13 +29,13 @@ const BottomNavigation = () => {
               <BiShuffle />
             </span>
             <span className="Icon">
-              <GiPreviousButton />
+              <ImPrevious2 />
+            </span>
+            <span className="Icon Play">
+              <FaPlayCircle />
             </span>
             <span className="Icon">
-              <BsFillPlayFill />
-            </span>
-            <span className="Icon">
-              <GiNextButton />
+              <ImNext2 />
             </span>
             <span className="Icon">
               <RiRepeat2Fill />
@@ -52,24 +48,24 @@ const BottomNavigation = () => {
           </div>
         </div>
         <div className="RightBox">
-          <span>
+          <span className="RightIcon">
             <TbMicrophone2 />
           </span>
-          <span>
+          <span className="RightIcon">
             <AiOutlineAlignCenter />
           </span>
-          <span>
+          <span className="RightIcon">
             <TbDevices2 />
           </span>
-          <span>
+          <span className="RightIcon">
             <BsFillVolumeUpFill />
           </span>
           <span>
-            <progress value="70" max="100">
+            <progress className="ProgressBar2" value="70" max="100">
               70%
             </progress>
           </span>
-          <span>
+          <span className="RightIcon">
             <AiOutlineExpandAlt />
           </span>
         </div>
