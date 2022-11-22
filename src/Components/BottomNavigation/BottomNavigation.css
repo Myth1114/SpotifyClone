@@ -103,3 +103,10 @@ footer .MusicPlayer .LeftBox > * {
   color: #fff;
   transition: all .3s ease-in-out;
 }
+
+
+@media (max-width:768px){
+  footer{
+    display: none;
+  }
+}

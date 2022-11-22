@@ -2,6 +2,7 @@ import React from 'react'
 
 import './App.css';
 import BottomNavigation from './Components/BottomNavigation/BottomNavigation';
+import MobileFooter from './Components/MobileFooter/MobileFooter';
 import LandingPage from './LandingPage/LandingPage';
 
 function App() {
@@ -9,6 +10,7 @@ function App() {
     <div>
      <LandingPage/>
      <BottomNavigation/>
+     <MobileFooter/>
     </div>
   )
 }
