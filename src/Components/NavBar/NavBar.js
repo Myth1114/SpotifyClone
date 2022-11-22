@@ -1,19 +1,17 @@
 import React from "react";
-import {FaGreaterThan, FaLessThan} from 'react-icons/fa'
+import {IoMdNotificationsOutline,IoIosTimer} from 'react-icons/io'
+import {CiSettings} from 'react-icons/ci'
 const NavBar = () => {
   return (
     <nav>
-      <div className="NavItems">
-        <div className="Less">
-          <FaLessThan />
-        </div>
-        <div className="More">
-          <FaGreaterThan />
-        </div>
-      </div>
       <div className="Profile">
         <img src="./Images/Daily.png" alt="fff" />
-        <h4 className="user">Myth</h4>
+        <span className="User">Mythlesh</span>
+      </div>
+      <div className="NavIcons">
+       <span><IoMdNotificationsOutline/></span>
+       <span><IoIosTimer/></span>
+       <span><CiSettings/></span>
       </div>
     </nav>
   );
